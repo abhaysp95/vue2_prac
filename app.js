@@ -1,9 +1,21 @@
 new Vue({
 	el: '#vue-app',
 	data: {
-		name: 'Someone',
-		job: 'Operator',
-		website: 'https://archlinux.org',
-		websiteTag: '<a href="https://v2.vuejs.org/v2/guide/">Visit Vue2</a>'
+		age: 10,
+		x: 0,
+		y: 0
+	},
+	methods: {
+		addAge: function(inc) {
+			this.age += inc
+		},
+		subAge: function(dec) {
+			this.age -= dec
+		},
+		updateXY: function(event) {
+			// console.log(event)
+			this.x = event.offsetX
+			this.y = event.offsetY
+		}
 	}
 });
