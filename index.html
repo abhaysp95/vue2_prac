@@ -10,14 +10,13 @@
 	<body>
 		<!-- event listening (and modifier) are similar in concept for keyboard too -->
 		<div id="vue-app">
-			<button @click="a++">Add to a</button>
-			<button @click="b++">Add to b</button>
-			<p>A - {{ a }}</p>
-			<p>B - {{ b }}</p>
-			<br>
-			<!-- computed properties -->
-			<p>Age + A = {{ addToA }}</p>
-			<p>Age + B = {{ addToB }}</p>
+			<button @click="error = !error">Toggle Error</button>
+			<button @click="success = !success">Toggle Success</button>
+			<!-- <p v-show="error">There has been a error</p>
+			<p v-show="success">Hurrah, Mission accomplished</p> -->
+			<p v-if="error">There has been a error</p>
+			<p v-else-if="success">Hurrah, Mission accomplished</p>
+			<p v-else>It's either success or failure</p>
 		</div>
 		<script src="app.js"></script>
 	</body>
