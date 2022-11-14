@@ -10,18 +10,15 @@
 	<body>
 		<!-- event listening (and modifier) are similar in concept for keyboard too -->
 		<div id="vue-app">
-			<h1>Events</h1>
-			<p>My age is: {{ age }}</p>
-			<button @click.once="age++">Add a year</button>
-			<button v-on:click="age--">Subtract a year</button>
-			<button @dblClick="age+=10">Add 10 year</button>
-			<button v-on:dblClick="age-=10">Subtract 10 year</button>
-
-			<div id="canvas" @mousemove="updateXY">
-				<p>{{ x }}, {{ y }}</p>
-			</div>
-			<hr>
-			<a @click.prevent="goSomewhere" href="somwhere">Go Somewhere</a>
+			<h1>Two Way Data Binding</h1>
+			<label for="name">Name: </label>
+			<input id="name" type="text" v-model="name"/>
+			<br>
+			<p>{{ name }}</p>
+			<label for="age">Age: </label>
+			<input id="age" type="text" v-model="age"/>
+			<br>
+			<p>{{ age }}</p>
 		</div>
 		<script src="app.js"></script>
 	</body>
