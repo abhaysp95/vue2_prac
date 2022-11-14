@@ -22,12 +22,12 @@
 			</div>
 			<h2>New Yonkous</h2>
 			<div :class="{new: true, gen: current}">
-				<div v-for="yonkou in newYonkous">
+				<template v-for="yonkou in newYonkous">
 					<p>
 						<span :class="{active: current}">{{ yonkou.name }}</span>&#9;&#9;{{ yonkou.bounty }}
 					</p>
 				</div>
-			</div>
+			</template>
 		</div>
 		<script src="app.js"></script>
 	</body>
