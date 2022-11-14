@@ -1,0 +1,17 @@
+.new {
+	margin-left: 50px;
+	margin-right: 50px;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.gen {
+	border: 2px solid black;
+}
+
+.active {
+	padding: 10px;
+	background-color: red;
+	color: yellow;
+}

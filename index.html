@@ -10,13 +10,24 @@
 	<body>
 		<!-- event listening (and modifier) are similar in concept for keyboard too -->
 		<div id="vue-app">
-			<button @click="error = !error">Toggle Error</button>
-			<button @click="success = !success">Toggle Success</button>
-			<!-- <p v-show="error">There has been a error</p>
-			<p v-show="success">Hurrah, Mission accomplished</p> -->
-			<p v-if="error">There has been a error</p>
-			<p v-else-if="success">Hurrah, Mission accomplished</p>
-			<p v-else>It's either success or failure</p>
+			<h1>Looping</h1>
+			<button @click="current = !current">Toggle Generation</button>
+			<h2>Old Yonkous</h2>
+			<div :class="{old: true, gen: !current}">
+				<ul>
+					<li v-for="yonkou in oldYonkous">
+						{{ yonkou }}
+					</li>
+				</ul>
+			</div>
+			<h2>New Yonkous</h2>
+			<div :class="{new: true, gen: current}">
+				<div v-for="yonkou in newYonkous">
+					<p>
+						<span :class="{active: current}">{{ yonkou.name }}</span>&#9;&#9;{{ yonkou.bounty }}
+					</p>
+				</div>
+			</div>
 		</div>
 		<script src="app.js"></script>
 	</body>
