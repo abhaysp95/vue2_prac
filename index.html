@@ -9,8 +9,14 @@
 	</head>
 	<body>
 		<div id="vue-app">
-			<h1>{{ greet('morning') }}</h1>
-			<p>Job: {{ job }}</p>
+			<h1>Data Binding</h1>
+			Visit: <a :href="website">Arch Linux</a>
+			<br>
+			<label for="job">Enter Job:</label>
+			<input type="text" id="job" v-bind:value="job"/>
+			<hr>
+			<p v-html="websiteTag">Learn more</p>
+			<!-- this will put websiteTag html rendered content inside the tag, not "Learn more" -->
 		</div>
 		<script src="app.js"></script>
 	</body>
