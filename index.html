@@ -8,10 +8,11 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 	</head>
 	<body>
+		<!-- event listening (and modifier) are similar in concept for keyboard too -->
 		<div id="vue-app">
 			<h1>Events</h1>
 			<p>My age is: {{ age }}</p>
-			<button @click="age++">Add a year</button>
+			<button @click.once="age++">Add a year</button>
 			<button v-on:click="age--">Subtract a year</button>
 			<button @dblClick="age+=10">Add 10 year</button>
 			<button v-on:dblClick="age-=10">Subtract 10 year</button>
@@ -19,6 +20,8 @@
 			<div id="canvas" @mousemove="updateXY">
 				<p>{{ x }}, {{ y }}</p>
 			</div>
+			<hr>
+			<a @click.prevent="goSomewhere" href="somwhere">Go Somewhere</a>
 		</div>
 		<script src="app.js"></script>
 	</body>
