@@ -1,0 +1,12 @@
+{
+  "name": "vue2_prac",
+  "version": "1.0.0",
+  "description": "basic vue2 practice",
+  "main": "index.js",
+  "repository": "git@github.com:coolabhays/vue2_prac.git",
+  "author": "coolabhays <abhaysp9955@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vue-cli": "^2.9.6"
+  }
+}
