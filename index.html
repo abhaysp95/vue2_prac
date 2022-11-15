@@ -9,7 +9,16 @@
 	</head>
 	<body>
 		<div id="vue-app">
-
+			<h2>Refs</h2>
+			<label for="food">Enter you fav. food: </label>
+			<input id="food" type="text" ref="userInput" />
+			<button @click="readRefs">Submit</button>
+			<br>
+			<p>Your fav. food: {{ favFood }}</p>
+			<hr>
+			<div ref="getContent">
+				<p>Trying to say something here</p>
+			</div>
 		</div>
 		<script src="./app.js"></script>
 	</body>
