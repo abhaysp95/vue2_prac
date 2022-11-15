@@ -1,7 +1,7 @@
 const vue1 = new Vue({
 	el: '#vue-app-one',
 	data: {
-		title: "Vue App Two"
+		title: "Vue App One"
 	},
 	computed: {
 		greet: function() {
@@ -13,11 +13,16 @@ const vue1 = new Vue({
 const vue2 = new Vue({
 	el: '#vue-app-two',
 	data: {
-		title: "Vue App One"
+		title: "Vue App Two"
 	},
 	computed: {
 		greet: function() {
 			return `Howdy from ${this.title}`
 		}
 	},
+	methods: {
+		changeOneTitle: function() {
+			vue1.title = "Vue App Primary"
+		}
+	}
 })
