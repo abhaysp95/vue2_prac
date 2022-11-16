@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { eventBus } from '../main';
+
 export default {
 	props: {
 		footerTitle: {
@@ -16,6 +18,10 @@ export default {
 		return {
 			copyright: 'Copyright 2022'
 		}
+	},
+	created() {
+		// not a good idea to mutate props (suggested use, computed refs)
+		eventBus.$on('titleChanged', (newTitle) => this.footerTitle = newTitle)
 	}
 }
 </script>
