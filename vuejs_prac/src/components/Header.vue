@@ -1,11 +1,12 @@
 <template>
 	<header>
-		<h1>{{ title }}</h1>
+		<h1>{{ headerTitle }}</h1>
 	</header>
 </template>
 
 <script>
 export default {
+	props: [ "headerTitle" ],
 	data() {
 		return {
 			title: "Vue Fighters"

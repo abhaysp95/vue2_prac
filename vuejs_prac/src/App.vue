@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-	<fighter-header></fighter-header>
+	<fighter-header :headerTitle="title"></fighter-header>
 	<fighter-vue :fighters="fighters"></fighter-vue>
-	<fighter-footer></fighter-footer>
+	<hr />
+	<fighter-vue :fighters="fighters"></fighter-vue>
+	<fighter-footer :footerTitle="title"></fighter-footer>
   </div>
 </template>
 
@@ -20,6 +22,7 @@ export default {
   },
   data () {
 	return {
+		title: "Vue Fighters",
 		fighters: [
 			{ name: "Ryu", speciality: "Karate", show: false },
 			{ name: "Crystal", speciality: "Jui-Jitsu", show: false },

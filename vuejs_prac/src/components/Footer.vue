@@ -1,14 +1,20 @@
 <template>
 	<footer>
-		<p>{{ copyright }}</p>
+		<p>{{ copyright }} {{ footerTitle }}</p>
 	</footer>
 </template>
 
 <script>
 export default {
+	props: {
+		footerTitle: {
+			type: String,
+			required: true,
+		}
+	},
 	data() {
 		return {
-			copyright: 'Copyright 2022 Vue Fighters'
+			copyright: 'Copyright 2022'
 		}
 	}
 }

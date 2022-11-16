@@ -7,19 +7,25 @@
 				<h3 v-show="fighter.show">{{ fighter.speciality }}</h3>
 			</li>
 		</ul>
+		<button @click="deleteFighter">Delete Fighter</button>
 	</div>
 </template>
 
 <script>
 export default {
-	data() {
-	},
+	/* data() {
+	}, */
 	/* props: [ 'fighters' ] */
 	// validation syntax
 	props: {
 		fighters: {
 			type: Array,
 			required: true,
+		}
+	},
+	methods: {
+		deleteFighter: function() {
+			this.fighters.pop()
 		}
 	}
 }
