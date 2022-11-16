@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-	<fighter-header :headerTitle="title"></fighter-header>
-	<fighter-vue :fighters="fighters"></fighter-vue>
-	<hr />
+	<!-- you can pass down $event as argument too for some method -->
+	<fighter-header :headerTitle="title" @changeTitleEvent="title = $event"></fighter-header>
 	<fighter-vue :fighters="fighters"></fighter-vue>
 	<fighter-footer :footerTitle="title"></fighter-footer>
   </div>
