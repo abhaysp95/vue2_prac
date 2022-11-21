@@ -1,42 +1,26 @@
 <template>
   <div id="app">
-	<!-- you can pass down $event as argument too for some method -->
-	<fighter-header :headerTitle="title" @changeTitleEvent="title = $event"></fighter-header>
-	<fighter-vue :fighters="fighters"></fighter-vue>
-	<fighter-footer :footerTitle="title"></fighter-footer>
+	<formHelper>
+	 	<h2>Hi, this is your parent</h2>
+		<!-- passing to named slots -->
+		<h3 slot="heading">Hi, from heading H3</h3>
+		<p slot="para">This text belongs to slot para</p>
+	</formHelper>
   </div>
 </template>
 
 <script>
-import fighters from './components/Fighters.vue'
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+import FormHelper from './components/FormHelper.vue'
 
 export default {
   name: 'app',
   components: {
-	"fighter-vue": fighters,
-	"fighter-header": Header,
-	"fighter-footer": Footer,
+	'formHelper': FormHelper,
   },
   data () {
-	return {
-		title: "Vue Fighters",
-		fighters: [
-			{ name: "Ryu", speciality: "Karate", show: false },
-			{ name: "Crystal", speciality: "Jui-Jitsu", show: false },
-			{ name: "Hitoshi", speciality: "Kalaripayattu", show: false },
-			{ name: "Tango", speciality: "Boxing", show: false },
-			{ name: "Kami", speciality: "MMA", show: false },
-		]
-	}
+	return {}
   }
 }
 </script>
 
-<style scoped>
-h1 {
-	color: purple;
-	font-family: 'Nunito SemiBold';
-}
-</style>
+<style scoped></style>
